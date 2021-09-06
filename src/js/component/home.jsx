@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "/workspace/react-hello/src/styles/index.scss";
 
 //create your first component
 const Home = props => {
@@ -13,44 +14,49 @@ const Home = props => {
 	};
 
 	return (
-		<div>
-			<div>
-				<input onKeyUp={e => Enter(e)} />
-			</div>
-			<div>
-				<ul>
-					{tasks.length === 0 ? (
-						<li>No task, add a task</li>
-					) : (
-						tasks.map((t, index) => {
-							return (
-								<div key={index}>
-									<li>
-										<div>
-											{t}
+		<div className="titulo">
+			<h1>todos</h1>
+			<div className="container d-flex justify-content-center text-align-center">
+				<div>
+					<input
+						className="input1"
+						placeholder="¿What's need to be done?"
+						onKeyUp={e => Enter(e)}
+					/>
+					<ul>
+						{tasks.length === 0 ? (
+							<li className="tareas notask">
+								No task, add a task
+							</li>
+						) : (
+							tasks.map((t, index) => {
+								return (
+									<div key={index}>
+										<li className="tareas">
+											<p>{t}</p>
 											<button
 												onClick={() => {
 													tasks.splice(index, 1);
 													setTasks([...tasks]);
 												}}>
-												x
+												<i className="fas fa-times"></i>
 											</button>
-										</div>
-									</li>
-								</div>
-							);
-						})
-					)}
-					{tasks.length > 0 ? (
-						<li>
-							{tasks.length > 1
-								? `${tasks.length} items left`
-								: `${tasks.length} item left`}
-						</li>
-					) : (
-						""
-					)}
-				</ul>
+										</li>
+									</div>
+								);
+							})
+						)}
+						{tasks.length > 0 ? (
+							<li className="contadordetareas">
+								{tasks.length > 1
+									? `${tasks.length} items left`
+									: `${tasks.length} item left`}
+							</li>
+						) : (
+							""
+						)}
+					</ul>
+				</div>
 			</div>
 		</div>
 	);
