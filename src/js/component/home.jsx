@@ -20,7 +20,7 @@ const Home = props => {
 				<div>
 					<input
 						className="input1"
-						placeholder="¿What's need to be done?"
+						placeholder=" ¿What needs to be done?"
 						onKeyUp={e => Enter(e)}
 					/>
 					<ul>
@@ -35,6 +35,7 @@ const Home = props => {
 										<li className="tareas">
 											<p>{t}</p>
 											<button
+												className="boton"
 												onClick={() => {
 													tasks.splice(index, 1);
 													setTasks([...tasks]);
