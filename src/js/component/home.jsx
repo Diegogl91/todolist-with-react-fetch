@@ -15,7 +15,7 @@ const Home = props => {
 
 	return (
 		<div className="titulo">
-			<h1>todos</h1>
+			<h1>Todos</h1>
 			<div className="container d-flex justify-content-center text-align-center">
 				<div>
 					<input
