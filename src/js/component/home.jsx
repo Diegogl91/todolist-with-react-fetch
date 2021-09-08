@@ -136,7 +136,7 @@ const Home = props => {
 					setTasks([]);
 					deleteTasks();
 				}}>
-				Borrar Tareas
+				Erase Tasks
 			</button>
 		</div>
 	);
