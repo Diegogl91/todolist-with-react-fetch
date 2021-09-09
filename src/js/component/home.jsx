@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "/workspace/todo-list-with-react/src/styles/index.scss";
+import "/workspace/todolist-with-react-fetch/src/styles/index.scss";
 
 //create your first component
 const Home = props => {
